@@ -1,0 +1,35 @@
+{
+  "name": "softskill-ai-saas",
+  "version": "1.0.0",
+  "description": "Plateforme SaaS d'entretiens simulés et d'entraînement aux soft-skills",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "type-check": "turbo run type-check",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:reset": "supabase db reset",
+    "supabase:gen-types": "supabase gen types typescript --local > packages/db/src/types/supabase.ts",
+    "zip": "node scripts/create-zip.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.0",
+    "turbo": "^1.12.0",
+    "typescript": "^5.3.0",
+    "archiver": "^7.0.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
